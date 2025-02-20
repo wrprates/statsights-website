@@ -2,7 +2,7 @@ project:
   type: website
 
 website:
-  favicon: favicon.png
+  favicon: images/favicon.png
   navbar:
     left:
       - href: index.qmd
@@ -14,7 +14,4 @@ format:
       - cosmo
       - brand
     css: styles.css
-    toc: true
-
-
-
+    toc: false

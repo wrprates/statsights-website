@@ -7,7 +7,7 @@ color:
   primary: black
 
 logo: 
-  medium: logo_fundo_preto.png
+  medium: images/logo_fundo_preto.png
 
 typography:
   fonts:
