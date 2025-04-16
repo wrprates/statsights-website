@@ -4,14 +4,14 @@ color:
     blue: "#ddeaf1"
   background: white
   foreground: dark-grey
-  primary: black
+  primary: white
 
 logo: 
-  medium: logo_fundo_preto.png
+  medium: images/logo_fundo_branco.png
 
 typography:
   fonts:
-    - family: Jura
+    - family: Open Sans
       source: google
-  base: Jura
-  headings: Jura
+  base: Open Sans
+  headings: Open Sans
