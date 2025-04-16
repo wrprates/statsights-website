@@ -1,4 +1,8 @@
-## **Turn Your Data into Impactful Applications**
+---
+title: "<p> **Turn Your Data into Impactful Applications.**</p>"
+title-block-banner: "#003459"
+title-block-banner-color: "#fff"
+---
 
 **Your company has data—but are you truly maximizing its potential?**
 
@@ -10,17 +14,78 @@ Most data teams struggle with the same problem: delivering analyses that **don�
 
 With **StatSights**, you’re not just visualizing data—you’re building **engaging solutions** that drive decisions, automate reporting, and integrate seamlessly into your existing workflows.
 
-### **What We Offer**
+<br />
 
-🚀 **End-to-end Data Science services** – From data analysis to **machine learning models**, we build solutions tailored to your needs.
+::: {.column-screen .lp_full_screen_light style="background-color: #f2f2f2;"}
+::: {.column-page}
 
-📊 **Custom-built dashboards & reports** – Automated, interactive, and designed for action.
+<div class="center">
+# **How We Can Help Your Company**
+</div>
 
-💡 **Seamless integration into your workflow** – Our solutions can be embedded in **Shiny apps or delivered in custom formats** to match your business requirements.
+::: {.grid}
 
-⚙️ **Full transparency & knowledge transfer** – The entire codebase is **100% shared with your team**, ensuring maintainability and flexibility.
+::: {.g-col-12 .g-col-md-5 .g-start-md-2}
+### 🚀 **End-to-end Data Science services**
+:::
 
-🔧 **Training & enablement for your team** – We don’t just deliver; we train your team to maintain and extend the solution independently.
+::: {.g-col-12 .g-col-md-5}
+
+<div class="vertical-center">
+From data analysis to **machine learning models**, we build solutions tailored to your needs.
+</div>
+:::
+
+::: {.g-col-12 .g-col-md-5 .g-start-md-2}
+### 📊 **Custom-built dashboards & reports**
+:::
+
+::: {.g-col-12 .g-col-md-5}
+
+<div class="vertical-center">
+Automated, interactive, and designed for action.
+</div>
+:::
+
+::: {.g-col-12 .g-col-md-5 .g-start-md-2}
+### 💡 **Seamless integration into your workflow**
+:::
+
+::: {.g-col-12 .g-col-md-5}
+
+<div class="vertical-center">
+Our solutions can be embedded in **Shiny apps or delivered in custom formats** to match your business requirements.
+</div>
+:::
+
+::: {.g-col-12 .g-col-md-5 .g-start-md-2}
+### ⚙️ **Full transparency & knowledge transfer**
+:::
+
+::: {.g-col-12 .g-col-md-5}
+
+<div class="vertical-center">
+The entire codebase is **100% shared with your team**, ensuring maintainability and flexibility.
+</div>
+:::
+
+::: {.g-col-12 .g-col-md-5 .g-start-md-2}
+### 🔧 **Training & enablement for your team**
+:::
+
+::: {.g-col-12 .g-col-md-5}
+
+<div class="vertical-center">
+We don't just deliver; we train your team to maintain and extend the solution independently.
+</div>
+:::
+
+:::
+
+<br />
+
+:::
+:::
 
 ### **Why Work With StatSights?**
 
@@ -33,55 +98,48 @@ At **StatSights**, we specialize in:
 - **Delivering scalable data visualization & reporting tools** that fit seamlessly into your business.
 - **Providing full-code transparency & custom training** to empower your internal teams for long-term success.
 
-
-### With whom are you going to work with?
-
-Our team is composed by experienced Data Wcientists and R/Shiny developers.
-
-
-::: columns
-
-::: column
-
-#### Wlademir Ribeiro Prates, PhD
-
-*Senior Data Scientist and R/Shiny Developer*
-
-Blah
-:::
-
-::: column
-
-<img src="images/foto_wlad.jpeg" height="280px">
-
-:::
-:::
-
-
-::: columns
-
-::: column
-
-<img src="images/foto_wlad.jpeg" height="280px">
-
-:::
-
-::: column
-
-#### Tiago Adria Nunes
-
-*Senior Data Scientist and R/Shiny Developer*
-
-Blah
-:::
-
-:::
-
-
-
 ### **Let’s Build Something That Gets You Noticed**
 
 If you want to **elevate your company’s data strategy**, don’t settle for dashboards that go unnoticed. Let’s work together to create **custom solutions that truly stand out**.
 
-📩 **Get in touch:**
-**[wlademir@statsights.com](mailto:wlademir@statsights.com)** | **[tiago@statsights.com](mailto:tiago@statsights.com)**
+# 📩 **Get in touch:**
+
+## First, fill out the form below:
+
+::: {.cell}
+```{=html}
+
+<div id="typeform-embed" style="height: 1080px;"></div>
+
+<script src="https://embed.typeform.com/embed.js"></script>
+<script>
+  window.addEventListener("DOMContentLoaded", function () {
+    window.typeformEmbed.makeWidget(
+      document.getElementById("typeform-embed"),
+      "https://form.typeform.com/to/P3gkmRLy?utm_source=xxxxx&utm_medium=xxxxx&utm_campaign=xxxxx&utm_term=xxxxx&utm_content=xxxxx#name=xxxxx&email=xxxxx&phone_number=xxxxx&user_id=xxxxx&product_id=xxxxx&auth_code=xxxxx",
+      {
+        hideScrollbars: true,
+        opacity: 0,
+        buttonText: "Start",
+        autoResize: true
+      }
+    );
+  });
+</script>
+
+```
+:::
+
+## Then, schedule a call with us:
+
+::: {.cell}
+```{=html}
+<div
+  class="calendly-inline-widget"
+  data-url="https://calendly.com/tiago-statsights/30min"
+  style="min-width: 320px; height: 960px;">
+</div>
+
+<script type="text/javascript" src="https://calendly.com/assets/external/widget.js"></script>
+```
+:::

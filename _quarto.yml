@@ -6,7 +6,7 @@ website:
   navbar:
     left:
       - href: index.qmd
-        text: "Data Science Consulting and R/Shiny Development"
+        text: "Data insights, visualized."
 
 format:
   html:
@@ -15,3 +15,4 @@ format:
       - brand
     css: styles.css
     toc: false
+    fontcolor: "#595959"
