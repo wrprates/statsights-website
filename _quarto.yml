@@ -7,6 +7,15 @@ website:
     left:
       - href: index.qmd
         text: "Data insights, visualized."
+  page-footer:
+    background: "#f2f2f2"
+    left: ""
+    center: 
+      - text: "© 2024 Statsights. All rights reserved. | "
+      - text: "Home | "
+        href: index.qmd
+      - text: "Contact Us"
+        href: contact.qmd
 
 format:
   html:
