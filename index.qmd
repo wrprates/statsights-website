@@ -10,9 +10,9 @@ Many organizations rely on **BI dashboards** that provide static insights but fa
 
 ### **Your Data Deserves More Than Just Spreadsheets**
 
-Most data teams struggle with the same problem: delivering analyses that **don’t get the attention they deserve**. Static reports are overlooked, and traditional BI tools have limitations. The solution? **Custom-built, interactive applications** and **tailored data solutions** that transform raw data into powerful tools for business growth.
+Most data teams struggle with the same problem: delivering analyses that **don't get the attention they deserve**. Static reports are overlooked, and traditional BI tools have limitations. The solution? **Custom-built, interactive applications** and **tailored data solutions** that transform raw data into powerful tools for business growth.
 
-With **StatSights**, you’re not just visualizing data—you’re building **engaging solutions** that drive decisions, automate reporting, and integrate seamlessly into your existing workflows.
+With **StatSights**, you're not just visualizing data—you're building **engaging solutions** that drive decisions, automate reporting, and integrate seamlessly into your existing workflows.
 
 <br />
 
@@ -89,7 +89,7 @@ We don't just deliver; we train your team to maintain and extend the solution in
 
 ### **Why Work With StatSights?**
 
-Many data teams know what they need but **lack the technical expertise** to build, optimize, and deploy professional-grade **data science solutions**. That’s where we come in.
+Many data teams know what they need but **lack the technical expertise** to build, optimize, and deploy professional-grade **data science solutions**. That's where we come in.
 
 At **StatSights**, we specialize in:
 
@@ -98,40 +98,12 @@ At **StatSights**, we specialize in:
 - **Delivering scalable data visualization & reporting tools** that fit seamlessly into your business.
 - **Providing full-code transparency & custom training** to empower your internal teams for long-term success.
 
-### **Let’s Build Something That Gets You Noticed**
+### **Let's Build Something That Gets You Noticed**
 
-If you want to **elevate your company’s data strategy**, don’t settle for dashboards that go unnoticed. Let’s work together to create **custom solutions that truly stand out**.
+If you want to **elevate your company's data strategy**, don't settle for dashboards that go unnoticed. Let's work together to create **custom solutions that truly stand out**.
 
-# 📩 **Get in touch:**
-
-## First, fill out the form below:
-
-::: {.cell}
-```{=html}
-
-<iframe
- src="https://docs.google.com/forms/d/e/1FAIpQLSdYUq5V3rG2lofbfpIRXYGad-_0gCAB3m__G9h7MCuJG1EG5A/viewform?embedded=true"
- width="100%"
- height="550"
- frameborder="0"
- marginheight="0"
- marginwidth="0">
- Loading…
-</iframe>
-
-```
+::: {.content-block style="text-align: center; padding: 3rem 0;"}
+::: {.cta-button}
+[Get Started - Schedule Your Free Consultation](contact.qmd){.btn .btn-primary .btn-lg}
 :::
-
-## Then, schedule a call with us:
-
-::: {.cell}
-```{=html}
-<div
-  class="calendly-inline-widget"
-  data-url="https://calendly.com/tiago-statsights/30min"
-  style="min-width: 320px; height: 960px;">
-</div>
-
-<script type="text/javascript" src="https://calendly.com/assets/external/widget.js"></script>
-```
 :::

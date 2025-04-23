@@ -7,24 +7,31 @@
     "text": "About this site"
   },
   {
+    "objectID": "contact.html",
+    "href": "contact.html",
+    "title": "Get in touch",
+    "section": "",
+    "text": "Loading…"
+  },
+  {
+    "objectID": "contact.html#first-fill-out-the-form-below",
+    "href": "contact.html#first-fill-out-the-form-below",
+    "title": "Get in touch",
+    "section": "",
+    "text": "Loading…"
+  },
+  {
+    "objectID": "contact.html#then-schedule-a-call-with-us",
+    "href": "contact.html#then-schedule-a-call-with-us",
+    "title": "Get in touch",
+    "section": "Then, schedule a call with us:",
+    "text": "Then, schedule a call with us:"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "\nTurn Your Data into Impactful Applications.\n",
     "section": "",
-    "text": "Your company has data—but are you truly maximizing its potential?\nMany organizations rely on BI dashboards that provide static insights but fail to drive real action. With StatSights, you go beyond traditional reporting to leverage advanced Data Science, Machine Learning, and automation to create highly customized solutions that empower decision-makers and optimize workflows."
-  },
-  {
-    "objectID": "index.html#first-fill-out-the-form-below",
-    "href": "index.html#first-fill-out-the-form-below",
-    "title": "\nTurn Your Data into Impactful Applications.\n",
-    "section": "First, fill out the form below:",
-    "text": "First, fill out the form below:\n\n\n\n Loading…"
-  },
-  {
-    "objectID": "index.html#then-schedule-a-call-with-us",
-    "href": "index.html#then-schedule-a-call-with-us",
-    "title": "\nTurn Your Data into Impactful Applications.\n",
-    "section": "Then, schedule a call with us:",
-    "text": "Then, schedule a call with us:"
+    "text": "Your company has data—but are you truly maximizing its potential?\nMany organizations rely on BI dashboards that provide static insights but fail to drive real action. With StatSights, you go beyond traditional reporting to leverage advanced Data Science, Machine Learning, and automation to create highly customized solutions that empower decision-makers and optimize workflows.\n\nYour Data Deserves More Than Just Spreadsheets\nMost data teams struggle with the same problem: delivering analyses that don’t get the attention they deserve. Static reports are overlooked, and traditional BI tools have limitations. The solution? Custom-built, interactive applications and tailored data solutions that transform raw data into powerful tools for business growth.\nWith StatSights, you’re not just visualizing data—you’re building engaging solutions that drive decisions, automate reporting, and integrate seamlessly into your existing workflows.\n\n\n\n\n\nHow We Can Help Your Company\n\n\n\n🚀 End-to-end Data Science services\n\n\n\nFrom data analysis to machine learning models, we build solutions tailored to your needs.\n\n\n\n📊 Custom-built dashboards & reports\n\n\n\nAutomated, interactive, and designed for action.\n\n\n\n💡 Seamless integration into your workflow\n\n\n\nOur solutions can be embedded in Shiny apps or delivered in custom formats to match your business requirements.\n\n\n\n⚙️ Full transparency & knowledge transfer\n\n\n\nThe entire codebase is 100% shared with your team, ensuring maintainability and flexibility.\n\n\n\n🔧 Training & enablement for your team\n\n\n\nWe don’t just deliver; we train your team to maintain and extend the solution independently.\n\n\n\n\n\n\n\nWhy Work With StatSights?\nMany data teams know what they need but lack the technical expertise to build, optimize, and deploy professional-grade data science solutions. That’s where we come in.\nAt StatSights, we specialize in:\n\nDeveloping visually stunning, high-performance Shiny apps tailored to your business needs.\nBuilding automated machine learning pipelines to unlock predictive power in your data.\nDelivering scalable data visualization & reporting tools that fit seamlessly into your business.\nProviding full-code transparency & custom training to empower your internal teams for long-term success.\n\n\n\nLet’s Build Something That Gets You Noticed\nIf you want to elevate your company’s data strategy, don’t settle for dashboards that go unnoticed. Let’s work together to create custom solutions that truly stand out.\n\n\nGet Started - Schedule Your Free Consultation"
   }
 ]

@@ -12,3 +12,26 @@
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
 }
+
+.cta-button .btn-primary {
+    background-color: #B22222 !important; /* Vermelho escuro (FireBrick) */
+    border-color: #B22222 !important;
+    color: white !important;
+    padding: 1rem 2rem !important;
+    font-weight: bold !important;
+    transition: all 0.3s ease !important;
+    text-decoration: none !important;
+    display: inline-block !important;
+    border-radius: 0.375rem !important;
+}
+
+.cta-button .btn-primary:hover {
+    background-color: #8B0000 !important; /* Vermelho mais escuro no hover */
+    border-color: #8B0000 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cta-button {
+    display: inline-block;
+}
