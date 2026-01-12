@@ -1,0 +1,242 @@
+---
+title: "<p>**Transforme Oportunidades em Vendas**</p>"
+title-block-banner: "#003459"
+title-block-banner-color: "#fff"
+lang: pt-BR
+---
+
+**Gestão Completa da Jornada do Cliente em Consórcios**
+
+Profissionalize sua operação de vendas mapeando cada etapa da jornada do cliente, eliminando perdas de oportunidades e aumentando conversão com dados em tempo real.
+
+---
+
+### **Pare de Perder Vendas Por Falta de Organização**
+
+Se você é corretor ou tem um escritório de vendas de consórcios, provavelmente já enfrentou estes desafios:
+
+- ❌ **Oportunidades perdidas no meio do funil** - Clientes somem entre o contato inicial e o fechamento por falta de follow-up organizado
+- ❌ **Planilhas desorganizadas e descentralizadas** - Cada vendedor tem seu controle, impossível ter visão consolidada da operação
+- ❌ **Falta de visibilidade sobre performance** - Não sabe taxa de conversão real, tempo médio por etapa, vendedores com melhor desempenho
+- ❌ **Dificuldade em gerenciar equipe de vendas** - Sem controle de metas, comissionamento e atividades dos vendedores
+- ❌ **Perda de histórico com clientes** - Não consegue resgatar interações passadas quando cliente volta a fazer contato
+
+### **A Solução: DealPath**
+
+O **DealPath** é a plataforma completa para corretores e escritórios de vendas de consórcios profissionalizarem sua operação. Um CRM desenvolvido especificamente para o mercado de consórcios, onde você controla cada etapa da jornada do cliente - do primeiro contato até o fechamento.
+
+<br />
+
+::: {.column-screen .lp_full_screen_light style="background-color: #f2f2f2;"}
+::: {.column-page}
+
+<div class="center">
+# **Tudo Que Você Precisa Para Profissionalizar Suas Vendas**
+</div>
+
+::: {.grid}
+
+::: {.g-col-12 .g-col-md-5 .g-start-md-2}
+### 🎯 **Funil Visual de Oportunidades**
+:::
+
+::: {.g-col-12 .g-col-md-5}
+
+<div class="vertical-center">
+Acompanhe cada negociação desde o primeiro contato (Lead) até o fechamento, movendo cards entre etapas da jornada. Nunca mais perca oportunidades no meio do caminho.
+</div>
+:::
+
+::: {.g-col-12 .g-col-md-5 .g-start-md-2}
+### 👥 **CRM Completo de Clientes**
+:::
+
+::: {.g-col-12 .g-col-md-5}
+
+<div class="vertical-center">
+Cadastro detalhado com CPF, contatos, histórico de propostas e timeline de todas as interações. Tenha todas as informações do cliente em um só lugar.
+</div>
+:::
+
+::: {.g-col-12 .g-col-md-5 .g-start-md-2}
+### 📋 **Gestão de Propostas de Consórcio**
+:::
+
+::: {.g-col-12 .g-col-md-5}
+
+<div class="vertical-center">
+Controle créditos contemplados e em andamento com valores, status e datas de contemplação. Organize todas as propostas de forma profissional.
+</div>
+:::
+
+::: {.g-col-12 .g-col-md-5 .g-start-md-2}
+### 📊 **Dashboard Analítico em Tempo Real**
+:::
+
+::: {.g-col-12 .g-col-md-5}
+
+<div class="vertical-center">
+Métricas de conversão, performance por vendedor, oportunidades por etapa, valor total do pipeline. Tome decisões baseadas em dados reais.
+</div>
+:::
+
+::: {.g-col-12 .g-col-md-5 .g-start-md-2}
+### 👨‍💼 **Gestão de Equipe de Vendas**
+:::
+
+::: {.g-col-12 .g-col-md-5}
+
+<div class="vertical-center">
+Cadastro de vendedores, controle de metas individuais, relatórios de performance. Gerencie sua equipe com eficiência e transparência.
+</div>
+:::
+
+::: {.g-col-12 .g-col-md-5 .g-start-md-2}
+### 🔐 **Controle Multi-usuário**
+:::
+
+::: {.g-col-12 .g-col-md-5}
+
+<div class="vertical-center">
+Cada vendedor acessa suas oportunidades, gestores veem visão consolidada com permissões personalizadas. Segurança e autonomia para sua equipe.
+</div>
+:::
+
+::: {.g-col-12 .g-col-md-5 .g-start-md-2}
+### 📝 **Histórico Completo de Interações**
+:::
+
+::: {.g-col-12 .g-col-md-5}
+
+<div class="vertical-center">
+Registre ligações, reuniões, propostas enviadas. Nunca perca informação importante sobre o relacionamento com seus clientes.
+</div>
+:::
+
+::: {.g-col-12 .g-col-md-5 .g-start-md-2}
+### 🔍 **Filtros e Buscas Avançadas**
+:::
+
+::: {.g-col-12 .g-col-md-5}
+
+<div class="vertical-center">
+Encontre rapidamente qualquer cliente, oportunidade ou proposta por múltiplos critérios. Agilidade no dia a dia de vendas.
+</div>
+:::
+
+:::
+
+<br />
+
+:::
+:::
+
+---
+
+### **Sistema Em Produção e Confiável**
+
+✅ **Sistema em produção desde 2025** - Testado e validado no mercado com centenas de milhões em cartas de consórcios sendo geridos.
+
+✅ **Desenvolvido por especialistas** em gestão comercial e vendas
+
+✅ **Baseado em práticas reais** de escritórios de alto desempenho
+
+✅ **Tecnologia robusta** utilizada por empresas de dados e analytics
+
+---
+
+::: {.column-screen .lp_full_screen_light style="background-color: #f2f2f2;"}
+::: {.column-page}
+
+<div class="center" style="padding: 2rem 0;">
+# **Plano Profissional**
+</div>
+
+<div class="center" style="padding: 0 0 1rem 0;">
+<h2 style="color: #003459; font-size: 3rem; font-weight: bold; margin: 0;">R$ 247<span style="font-size: 1.5rem; font-weight: normal;">/mês</span></h2>
+<p style="color: #28A745; font-weight: bold; margin-top: 0.5rem;">✅ Garantia incondicional de 7 dias</p>
+</div>
+
+::: {.grid}
+
+::: {.g-col-12 .g-col-md-6}
+### ✨ **O que está incluso:**
+
+- ✅ **Usuários ilimitados** - Toda sua equipe pode usar
+- ✅ **Oportunidades ilimitadas** - Sem limite de negociações
+- ✅ **Clientes ilimitados** - Cresça sem preocupações
+- ✅ **Dashboard analítico completo** - Todos os gráficos e métricas
+- ✅ **Gestão de equipe de vendas** - Controle total da operação
+:::
+
+::: {.g-col-12 .g-col-md-6}
+### 🎁 **Benefícios extras:**
+
+- ✅ **Suporte técnico via email** - Resposta em até 24h úteis
+- ✅ **Atualizações automáticas** - Sempre com novos recursos
+- ✅ **Acesso de qualquer dispositivo** - Desktop, tablet ou celular
+- ✅ **Dados seguros** - Backup automático e criptografia
+- ✅ **Sem fidelidade** - Cancele quando quiser
+:::
+
+:::
+
+<div class="center" style="padding: 2rem 0;">
+::: {.cta-button}
+[🚀 Ativar Meu DealPath Agora](https://pay.hotmart.com/Q103816584I){.btn .btn-primary .btn-lg target="_blank" style="font-size: 1.2rem; padding: 1rem 2rem;"}
+:::
+<p style="margin-top: 1rem; color: #6C757D; font-size: 0.95rem;">💳 Pagamento seguro via Hotmart | ⚡ Acesso imediato após pagamento</p>
+</div>
+
+:::
+:::
+
+---
+
+### **Perguntas Frequentes**
+
+::: {.grid}
+
+::: {.g-col-12 .g-col-md-6}
+**❓ Preciso instalar algo?**
+Não, é 100% online. Acesse direto do navegador de qualquer dispositivo.
+
+**❓ Quantos usuários posso ter?**
+Ilimitados no plano. Cadastre toda sua equipe sem custo adicional.
+
+**❓ Meus dados estão seguros?**
+Sim, com backup automático, criptografia e segurança de dados.
+
+**❓ Posso cancelar quando quiser?**
+Sim, sem multa ou fidelidade. Cancele a qualquer momento.
+:::
+
+::: {.g-col-12 .g-col-md-6}
+**❓ Funciona no celular?**
+Sim, totalmente responsivo. Funciona em qualquer dispositivo.
+
+**❓ Preciso de conhecimento técnico?**
+Não, interface intuitiva e simples. Qualquer pessoa consegue usar.
+
+**❓ Como funciona o suporte?**
+Via email com resposta em até 24h úteis, de segunda a sexta, 9h às 18h.
+
+**❓ Tem garantia?**
+Sim, garantia incondicional de 7 dias. Se não gostar, devolvemos seu dinheiro.
+:::
+
+:::
+
+---
+
+<div class="center" style="padding: 3rem 0;">
+<h2 style="font-size: 2rem; margin-bottom: 1rem;">🎯 Pare de Perder Oportunidades</h2>
+<p style="font-size: 1.1rem; color: #595959; margin-bottom: 2rem;">Profissionalize sua operação de vendas hoje mesmo e veja seus resultados decolarem</p>
+
+::: {.cta-button}
+[✨ Começar Agora](https://pay.hotmart.com/Q103816584I){.btn .btn-primary .btn-lg target="_blank" style="font-size: 1.2rem; padding: 1rem 2rem;"}
+:::
+
+<p style="margin-top: 1.5rem; color: #6C757D; font-size: 0.9rem;">⚡ Preço inicial exclusivo para primeiros clientes - Esta condição não se repetirá<br>
+💰 Garantia incondicional de 7 dias - Satisfação garantida ou seu dinheiro de volta</p>
+</div>
