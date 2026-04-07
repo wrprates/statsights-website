@@ -1,4 +1,4 @@
-# site-statsights
+# statsights-website
 
 Consulting company website built with Vite, React, TypeScript, Tailwind CSS, and shadcn/ui.
 
@@ -42,7 +42,7 @@ Open [http://localhost:5173](http://localhost:5173) in your browser.
 ## Available commands
 
 | Command | Description |
-|---------|-------------|
+| ------- | ----------- |
 | `npm run dev` | Start dev server with hot reload |
 | `npm run build` | Build for production (outputs to `dist/`) |
 | `npm run preview` | Preview the production build locally |
@@ -62,7 +62,7 @@ See the full component list at [ui.shadcn.com/docs/components](https://ui.shadcn
 
 ## Project structure
 
-```
+```text
 src/
   components/
     ui/          # shadcn/ui components (owned, editable)

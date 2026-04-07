@@ -1,9 +1,0 @@
-{
-  "permissions": {
-    "allow": [
-      "Read(//c/Users/tiago/OneDrive/Documentos/GitHub/**)",
-      "Read(//c/Users/tiago/Documents/**)",
-      "Read(//c/Users/tiago/**)"
-    ]
-  }
-}

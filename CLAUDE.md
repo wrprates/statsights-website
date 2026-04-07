@@ -2,7 +2,7 @@
 
 ## Project
 
-**site-statsights** — Consulting company website.
+**statsights-website** — Consulting company website.
 
 Goal: a premium, modern marketing website for a consulting company. Must look credible, polished, and professional.
 
@@ -45,12 +45,35 @@ npx shadcn@latest add navigation-menu
 src/
   components/
     ui/          # shadcn/ui components (owned, editable)
-    sections/    # page sections: Hero, Services, CaseStudies, Testimonials, Contact
-    layout/      # Header, Footer, Navigation
+    sections/    # page sections: Hero, Services, WhyUs, CTA
+    layout/      # Header, Footer
   pages/         # page-level components
+    Home.tsx
+    Services.tsx
+    Contact.tsx
+    DealpathConsorcios.tsx   # landing page for the DealPath CRM product
   lib/           # utility functions (cn helper etc.)
-  styles/        # global CSS
 ```
+
+## Pages & routes
+
+| Route                   | Component                  | Description                              |
+|-------------------------|----------------------------|------------------------------------------|
+| `/`                     | `Home`                     | Main homepage                            |
+| `/services`             | `Services`                 | Services overview                        |
+| `/contact`              | `Contact`                  | Contact form / info                      |
+| `/dealpath-consorcios`  | `DealpathConsorcios`       | Landing page for DealPath CRM product    |
+
+Routes are handled by React Router with `HashRouter` (e.g. `/#/dealpath-consorcios`).
+
+## DealPath Consorcios page
+
+`src/pages/DealpathConsorcios.tsx` is a standalone sales/landing page for the **DealPath** product — a CRM built specifically for the consórcios (Brazilian installment purchase) sales market.
+
+- Purchase link goes to Hotmart: `https://pay.hotmart.com/Q103816584I` (defined as `HOTMART_URL` constant at the top of the file)
+- Page is in Brazilian Portuguese
+- Sections: Hero → Pain points → Solution intro → Features grid → Trust signals → Pricing → FAQ → Final CTA
+- No header/footer nav links point to this page by default — it is meant to be accessed directly via URL or external links
 
 ## Style guidelines
 
