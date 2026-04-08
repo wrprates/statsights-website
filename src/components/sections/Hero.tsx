@@ -81,7 +81,7 @@ export function Hero() {
             </Link>
           </Button>
           <Button asChild variant="ghost" size="lg" className="text-white/70 hover:text-white border border-white/10 hover:bg-white/10">
-            <a href="#services">See How We Help</a>
+            <Link to="/services">See How We Help</Link>
           </Button>
         </motion.div>
       </motion.div>
