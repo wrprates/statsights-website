@@ -40,7 +40,7 @@ export function Contact() {
             <iframe
               src="https://docs.google.com/forms/d/e/1FAIpQLSdYUq5V3rG2lofbfpIRXYGad-_0gCAB3m__G9h7MCuJG1EG5A/viewform?embedded=true"
               width="100%"
-              height="550"
+              height="820"
               frameBorder="0"
               marginHeight={0}
               marginWidth={0}
@@ -60,7 +60,7 @@ export function Contact() {
             <div
               className="calendly-inline-widget"
               data-url="https://calendly.com/tiago-statsights/30min"
-              style={{ minWidth: '320px', height: '700px' }}
+              style={{ minWidth: '320px', height: '840px' }}
             />
           </div>
         </div>
