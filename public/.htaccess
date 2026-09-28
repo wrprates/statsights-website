@@ -1,6 +1,8 @@
 # Apache config for the statsights.com host.
 Options -MultiViews -Indexes
 DirectorySlash Off
+# llms.txt, robots.txt and sitemap.xml contain accented Portuguese text
+AddDefaultCharset utf-8
 RewriteEngine On
 
 # Canonical host: https://statsights.com

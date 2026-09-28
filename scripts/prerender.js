@@ -8,9 +8,24 @@ const root = path.resolve(import.meta.dirname, '..')
 const dist = path.join(root, 'dist')
 const serverEntry = path.join(root, 'dist-ssr', 'entry-server.js')
 
-const { render, PAGES, NOT_FOUND, SITE_URL, canonicalUrl, hreflangLinks, ogImageAlt, ogLocale } = await import(pathToFileURL(serverEntry).href)
+const {
+  render,
+  PAGES,
+  NOT_FOUND,
+  SITE_URL,
+  SITE_NAME,
+  LINKEDIN_URL,
+  ORGANIZATION,
+  canonicalUrl,
+  hreflangLinks,
+  ogImageAlt,
+  ogLocale,
+} = await import(pathToFileURL(serverEntry).href)
 
 const template = fs.readFileSync(path.join(dist, 'index.html'), 'utf-8')
+
+// "<" is escaped so no string in the data can close the <script> tag early.
+const organizationJsonLd = JSON.stringify(ORGANIZATION, null, 2).replace(/</g, '\\u003c')
 
 const escapeAttr = value =>
   value.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
@@ -20,11 +35,11 @@ function setTag(html, pattern, attr, value) {
   return html.replace(pattern, match => match.replace(new RegExp(`${attr}="[^"]*"`), () => `${attr}="${escapeAttr(value)}"`))
 }
 
-// Every replacement below passes a function, so "$&" or "$'" in page content (e.g. "R$") is inserted literally.
+// Replacements that insert page data pass a function, so "$&" or "$'" in content (e.g. "R$") is inserted literally.
 function renderPage(page) {
   const url = canonicalUrl(page.path)
   let html = template
-  html = html.replace(/<html lang="[^"]*"/, `<html lang="${page.lang}"`)
+  html = html.replace(/<html lang="[^"]*"/, () => `<html lang="${page.lang}"`)
   html = html.replace(/<title>[^<]*<\/title>/, () => `<title>${escapeAttr(page.title)}</title>`)
   html = setTag(html, /<meta name="description"[^>]*>/, 'content', page.description)
   html = setTag(html, /<link rel="canonical"[^>]*>/, 'href', url)
@@ -42,6 +57,7 @@ function renderPage(page) {
     html = html.replace(/\s*<link rel="canonical"[^>]*>/, '')
     html = html.replace('</title>', '</title>\n    <meta name="robots" content="noindex" />')
   }
+  html = html.replace('</head>', () => `  <script type="application/ld+json">\n${organizationJsonLd}\n    </script>\n  </head>`)
   return html.replace('<!--app-html-->', () => render(page.path))
 }
 
@@ -69,5 +85,32 @@ ${PAGES.map(p => `  <url>\n    <loc>${canonicalUrl(p.path)}</loc>\n  </url>`).jo
 `
 fs.writeFileSync(path.join(dist, 'sitemap.xml'), sitemap)
 console.log(`wrote sitemap.xml (${PAGES.length} URLs, ${SITE_URL})`)
+
+// llms.txt (https://llmstxt.org): a plain summary of the site for AI assistants, built from the same page list.
+const pageLinks = lang =>
+  PAGES.filter(p => p.lang === lang).map(p => `- [${p.title}](${canonicalUrl(p.path)}): ${p.description}`)
+const llms = [
+  `# ${SITE_NAME}`,
+  '',
+  `> ${PAGES[0].description}`,
+  '',
+  'Statsights is a consulting company that builds custom data science, machine learning, dashboard, and workflow automation solutions (including Shiny apps). Clients receive the full source code and training so their team can maintain it. The site is available in English and Brazilian Portuguese. DealPath Consórcios is a CRM product for the Brazilian consórcio sales market.',
+  '',
+  '## Pages (English)',
+  '',
+  ...pageLinks('en'),
+  '',
+  '## Páginas (Português do Brasil)',
+  '',
+  ...pageLinks('pt-BR'),
+  '',
+  '## Contact',
+  '',
+  `- [Book a free consultation](${canonicalUrl('/contact')})`,
+  `- [LinkedIn](${LINKEDIN_URL})`,
+  '',
+].join('\n')
+fs.writeFileSync(path.join(dist, 'llms.txt'), llms)
+console.log('wrote llms.txt')
 
 fs.rmSync(path.join(root, 'dist-ssr'), { recursive: true, force: true })

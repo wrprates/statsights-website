@@ -4,7 +4,18 @@ import { renderToString } from 'react-dom/server'
 import { StaticRouter } from 'react-router-dom'
 import App from './App.tsx'
 
-export { PAGES, NOT_FOUND, SITE_URL, canonicalUrl, hreflangLinks, ogImageAlt, ogLocale } from './seo'
+export {
+  PAGES,
+  NOT_FOUND,
+  SITE_URL,
+  SITE_NAME,
+  LINKEDIN_URL,
+  ORGANIZATION,
+  canonicalUrl,
+  hreflangLinks,
+  ogImageAlt,
+  ogLocale,
+} from './seo'
 
 export function render(path: string) {
   return renderToString(
