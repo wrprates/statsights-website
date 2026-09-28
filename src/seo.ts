@@ -1,4 +1,4 @@
-import { type Locale, localeFromPath, localizePath } from './i18n'
+import { type Locale, localeFromPath, localizePath } from './locale'
 
 export const SITE_URL = 'https://statsights.com'
 export const SITE_NAME = 'Statsights'
@@ -8,6 +8,7 @@ export interface PageMeta {
   title: string
   description: string
   lang: 'en' | 'pt-BR'
+  noindex?: boolean
 }
 
 export const PAGES: PageMeta[] = [
@@ -68,12 +69,14 @@ export const NOT_FOUND: Record<Locale, PageMeta> = {
     title: 'Statsights: Page not found',
     description: 'The page you are looking for does not exist.',
     lang: 'en',
+    noindex: true,
   },
   pt: {
     path: '/pt/404',
     title: 'Statsights: Página não encontrada',
     description: 'A página que você procura não existe.',
     lang: 'pt-BR',
+    noindex: true,
   },
 }
 
@@ -102,6 +105,15 @@ export function hreflangLinks(pathname: string) {
     { hreflang: 'pt-BR', href: canonicalUrl(pt) },
     { hreflang: 'x-default', href: canonicalUrl(en) },
   ]
+}
+
+const OG_IMAGE_ALT: Record<PageMeta['lang'], string> = {
+  en: 'Statsights - Data insights, visualized.',
+  'pt-BR': 'Statsights - Insights de dados, visualizados.',
+}
+
+export function ogImageAlt(lang: PageMeta['lang']) {
+  return OG_IMAGE_ALT[lang]
 }
 
 export function ogLocale(lang: PageMeta['lang']) {

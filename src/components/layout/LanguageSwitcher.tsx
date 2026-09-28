@@ -9,7 +9,7 @@ const languages: { locale: Locale; label: string; name: string; lang: string }[]
 ]
 
 export function LanguageSwitcher({ className }: { className?: string }) {
-  const { pathname } = useLocation()
+  const { pathname, search, hash } = useLocation()
   const current = useLocale()
   const links = languages.flatMap(language => {
     const to = alternatePath(pathname, language.locale)
@@ -30,13 +30,13 @@ export function LanguageSwitcher({ className }: { className?: string }) {
         return (
           <Link
             key={link.locale}
-            to={link.to}
+            to={{ pathname: link.to, search, hash }}
             lang={link.lang}
             hrefLang={link.lang}
             title={link.name}
             aria-current={active ? 'true' : undefined}
             className={cn(
-              'rounded-full px-2.5 py-1 transition-colors',
+              'rounded-full px-3 py-1.5 transition-colors',
               active ? 'bg-white text-[#003459]' : 'text-white/60 hover:text-white',
             )}
           >
