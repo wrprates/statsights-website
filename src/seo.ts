@@ -2,6 +2,21 @@ import { type Locale, localeFromPath, localizePath } from './locale'
 
 export const SITE_URL = 'https://statsights.com'
 export const SITE_NAME = 'Statsights'
+export const LINKEDIN_URL = 'https://www.linkedin.com/company/statsights/'
+
+// schema.org description of the company; scripts/prerender.js writes it into every page as JSON-LD.
+export const ORGANIZATION = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfessionalService',
+  name: SITE_NAME,
+  url: `${SITE_URL}/`,
+  logo: `${SITE_URL}/favicon.png`,
+  image: `${SITE_URL}/og-image.png`,
+  description: 'Data science, machine learning, and automation consulting.',
+  slogan: 'Data insights, visualized.',
+  knowsAbout: ['Data Science', 'Machine Learning', 'Automation', 'Dashboards'],
+  sameAs: [LINKEDIN_URL],
+}
 
 export interface PageMeta {
   path: string
