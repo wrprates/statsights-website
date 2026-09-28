@@ -18,14 +18,14 @@ export const PAGES: PageMeta[] = [
   },
   {
     path: '/services',
-    title: 'Services - Statsights',
+    title: 'Statsights: Services',
     description:
       'End-to-end data science, machine learning, dashboards, workflow automation, and team training. See how Statsights helps companies put their data to work.',
     lang: 'en',
   },
   {
     path: '/contact',
-    title: 'Contact - Statsights',
+    title: 'Statsights: Contact',
     description:
       'Book a free consultation with Statsights. Tell us about your data project and get a reply within 24 hours.',
     lang: 'en',
@@ -41,7 +41,7 @@ export const PAGES: PageMeta[] = [
 
 export const NOT_FOUND: PageMeta = {
   path: '/404',
-  title: 'Page not found - Statsights',
+  title: 'Statsights: Page not found',
   description: 'The page you are looking for does not exist.',
   lang: 'en',
 }
