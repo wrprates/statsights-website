@@ -3,8 +3,23 @@ import { Button } from '@/components/ui/button'
 import { ArrowRight } from 'lucide-react'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { useRef } from 'react'
+import { useLocale, useLocalizedPath } from '@/i18n'
+
+const copy = {
+  badge: { en: 'Data Science · Machine Learning · Automation', pt: 'Ciência de Dados · Machine Learning · Automação' },
+  headline: { en: 'Turn Your Data into', pt: 'Transforme Seus Dados em' },
+  highlight: { en: ' Impactful Applications.', pt: ' Aplicações de Impacto.' },
+  intro: {
+    en: 'Your company has data, but are you truly maximizing its potential? Go beyond static dashboards with custom Data Science, Machine Learning, and automation solutions.',
+    pt: 'Sua empresa tem dados, mas será que está aproveitando todo o potencial deles? Vá além dos dashboards estáticos com soluções personalizadas de Ciência de Dados, Machine Learning e automação.',
+  },
+  primaryCta: { en: 'Get Started: Free Consultation', pt: 'Comece Agora: Consultoria Gratuita' },
+  secondaryCta: { en: 'See How We Help', pt: 'Veja Como Ajudamos' },
+}
 
 export function Hero() {
+  const locale = useLocale()
+  const to = useLocalizedPath()
   const ref = useRef(null)
   const { scrollYProgress } = useScroll({ target: ref, offset: ['start start', 'end start'] })
   const y = useTransform(scrollYProgress, [0, 1], ['0%', '30%'])
@@ -44,13 +59,13 @@ export function Hero() {
           className="inline-flex items-center rounded-full px-4 py-1.5 text-sm text-white/80 mb-8 border border-white/10"
           style={{ background: 'rgba(255,255,255,0.08)', backdropFilter: 'blur(10px)' }}
         >
-          Data Science · Machine Learning · Automation
+          {copy.badge[locale]}
         </motion.div>
 
         {/* Not animated: the headline is the LCP element and should paint immediately */}
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight tracking-tight mb-6">
-          Turn Your Data into<br className="hidden md:block" />
-          <span style={{ background: 'linear-gradient(90deg, #14CDFE, #1d4ed8)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}> Impactful Applications.</span>
+          {copy.headline[locale]}<br className="hidden md:block" />
+          <span style={{ background: 'linear-gradient(90deg, #14CDFE, #1d4ed8)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>{copy.highlight[locale]}</span>
         </h1>
 
         <motion.p
@@ -59,9 +74,7 @@ export function Hero() {
           transition={{ duration: 0.7, delay: 0.3 }}
           className="text-lg md:text-xl text-white/60 max-w-2xl mx-auto mb-10 leading-relaxed"
         >
-          Your company has data, but are you truly maximizing its potential?
-          Go beyond static dashboards with custom Data Science, Machine Learning,
-          and automation solutions.
+          {copy.intro[locale]}
         </motion.p>
 
         <motion.div
@@ -71,13 +84,13 @@ export function Hero() {
           className="flex flex-col sm:flex-row items-center justify-center gap-4"
         >
           <Button asChild size="lg" className="font-semibold px-8 text-[#003459] bg-white hover:bg-white/80">
-            <Link to="/contact">
-              Get Started: Free Consultation
+            <Link to={to('/contact')}>
+              {copy.primaryCta[locale]}
               <ArrowRight size={16} className="ml-2" />
             </Link>
           </Button>
           <Button asChild variant="ghost" size="lg" className="text-white/70 hover:text-white border border-white/10 hover:bg-white/10">
-            <Link to="/services">See How We Help</Link>
+            <Link to={to('/services')}>{copy.secondaryCta[locale]}</Link>
           </Button>
         </motion.div>
       </motion.div>

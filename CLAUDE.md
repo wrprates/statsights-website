@@ -57,6 +57,7 @@ src/
     NotFound.tsx             # 404 page
   lib/           # utility functions (cn helper etc.)
   seo.ts         # per-page title, description, lang (used by RouteMeta and the prerender script)
+  i18n.ts        # locale helpers: useLocale, useLocalizedPath, localizePath
   entry-server.tsx           # build-time render entry for scripts/prerender.js
 scripts/
   prerender.js   # writes static HTML per route + sitemap.xml after `vite build`
@@ -69,9 +70,18 @@ scripts/
 | `/`                     | `Home`                     | Main homepage                            |
 | `/services`             | `Services`                 | Services overview                        |
 | `/contact`              | `Contact`                  | Contact form / info                      |
+| `/pt`, `/pt/services`, `/pt/contact` | same components | Portuguese (pt-BR) versions   |
 | `/dealpath-consorcios`  | `DealpathConsorcios`       | Landing page for DealPath CRM product    |
 
 Routes are handled by React Router with `BrowserRouter`, so each page has a real, indexable URL (e.g. `/dealpath-consorcios`). Old `/#/...` links are redirected by a script in `index.html`. When adding a route, add it to both `src/App.tsx` and `PAGES` in `src/seo.ts`.
+
+## Languages
+
+- English lives at the root, Portuguese (pt-BR) under `/pt` with the same paths (`/services` <-> `/pt/services`). The locale is derived from the URL (`useLocale()` in `src/i18n.ts`); there is no stored preference or auto-redirect.
+- Translatable strings sit next to the component that uses them as `{ en: '...', pt: '...' }` objects, read with `copy.key[locale]`. Build internal links with `useLocalizedPath()` so they stay in the current language.
+- To translate a new page: add both routes to `App.tsx` and both entries to `PAGES`. The header switcher (`LanguageSwitcher`) and hreflang tags only appear when both versions exist in `PAGES`.
+- Each language has its own 404 (`404.html`, `pt/404.html`); `.htaccess` picks the Portuguese one for URLs under `/pt`.
+- The DealPath page is Portuguese-only and stays at `/dealpath-consorcios`.
 
 ## DealPath Consorcios page
 

@@ -8,7 +8,7 @@ const root = path.resolve(import.meta.dirname, '..')
 const dist = path.join(root, 'dist')
 const serverEntry = path.join(root, 'dist-ssr', 'entry-server.js')
 
-const { render, PAGES, NOT_FOUND, SITE_URL, canonicalUrl, ogLocale } = await import(pathToFileURL(serverEntry).href)
+const { render, PAGES, NOT_FOUND, SITE_URL, canonicalUrl, hreflangLinks, ogLocale } = await import(pathToFileURL(serverEntry).href)
 
 const template = fs.readFileSync(path.join(dist, 'index.html'), 'utf-8')
 
@@ -27,6 +27,10 @@ function renderPage(page, { noindex = false } = {}) {
   html = html.replace(/<title>[^<]*<\/title>/, `<title>${escapeAttr(page.title)}</title>`)
   html = setTag(html, /<meta name="description"[^>]*>/, 'content', page.description)
   html = setTag(html, /<link rel="canonical"[^>]*>/, 'href', url)
+  const alternates = hreflangLinks(page.path)
+    .map(({ hreflang, href }) => `<link rel="alternate" hreflang="${hreflang}" href="${escapeAttr(href)}" />`)
+    .join('\n    ')
+  if (alternates) html = html.replace(/<link rel="canonical"[^>]*>/, canonical => `${canonical}\n    ${alternates}`)
   html = setTag(html, /<meta property="og:title"[^>]*>/, 'content', page.title)
   html = setTag(html, /<meta property="og:description"[^>]*>/, 'content', page.description)
   html = setTag(html, /<meta property="og:url"[^>]*>/, 'content', url)
@@ -35,15 +39,21 @@ function renderPage(page, { noindex = false } = {}) {
   return html.replace('<!--app-html-->', render(page.path))
 }
 
-// GitHub Pages serves /services from services.html, so no trailing-slash redirects.
-for (const page of PAGES) {
-  const file = page.path === '/' ? 'index.html' : `${page.path.slice(1)}.html`
-  fs.writeFileSync(path.join(dist, file), renderPage(page))
-  console.log(`prerendered ${page.path} -> dist/${file}`)
+function writePage(file, html) {
+  fs.mkdirSync(path.dirname(path.join(dist, file)), { recursive: true })
+  fs.writeFileSync(path.join(dist, file), html)
+  console.log(`prerendered -> dist/${file}`)
 }
 
-fs.writeFileSync(path.join(dist, '404.html'), renderPage(NOT_FOUND, { noindex: true }))
-console.log('prerendered 404 -> dist/404.html')
+// Apache (public/.htaccess) serves /services from services.html and /pt/services from pt/services.html.
+for (const page of PAGES) {
+  writePage(page.path === '/' ? 'index.html' : `${page.path.slice(1)}.html`, renderPage(page))
+}
+
+// One 404 page per language; .htaccess picks pt/404.html for URLs under /pt.
+for (const page of Object.values(NOT_FOUND)) {
+  writePage(`${page.path.slice(1)}.html`, renderPage(page, { noindex: true }))
+}
 
 const today = new Date().toISOString().slice(0, 10)
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
