@@ -19,7 +19,7 @@ const services = [
     title: { en: 'End-to-end Data Science', pt: 'Ciência de Dados de Ponta a Ponta' },
     description: {
       en: 'From data analysis to machine learning models, we build solutions tailored to your needs.',
-      pt: 'Da análise de dados a modelos de machine learning, criamos soluções sob medida para as suas necessidades.',
+      pt: 'Da análise de dados a modelos de machine learning, criamos soluções sob medida para suas necessidades.',
     },
   },
   {
@@ -46,7 +46,7 @@ const services = [
     title: { en: 'Full Transparency & Code Ownership', pt: 'Transparência Total e Propriedade do Código' },
     description: {
       en: 'The entire codebase is 100% shared with your team, ensuring maintainability and flexibility.',
-      pt: 'Todo o código é 100% compartilhado com a sua equipe, garantindo manutenção e flexibilidade.',
+      pt: 'Todo o código é 100% compartilhado com sua equipe, garantindo manutenção e flexibilidade.',
     },
   },
   {
@@ -56,7 +56,7 @@ const services = [
     title: { en: 'Training & Team Enablement', pt: 'Treinamento e Capacitação da Equipe' },
     description: {
       en: "We don't just deliver. We train your team to maintain and extend the solution independently.",
-      pt: 'Não apenas entregamos. Treinamos a sua equipe para manter e evoluir a solução com autonomia.',
+      pt: 'Não apenas entregamos. Treinamos sua equipe para manter e evoluir a solução com autonomia.',
     },
   },
   {
