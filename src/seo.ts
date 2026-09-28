@@ -4,18 +4,55 @@ export const SITE_URL = 'https://statsights.com'
 export const SITE_NAME = 'Statsights'
 export const LINKEDIN_URL = 'https://www.linkedin.com/company/statsights/'
 
-// schema.org description of the company; scripts/prerender.js writes it into every page as JSON-LD.
-export const ORGANIZATION = {
+// Service names as shown on /services (kept in English, the site's default language)
+const SERVICES = [
+  'End-to-End Data Science',
+  'Custom Dashboards & Reports',
+  'Workflow Integration',
+  'Full Transparency & Code Ownership',
+  'Training & Team Enablement',
+  'Machine Learning & Automation',
+]
+
+// schema.org data about the company and the site; scripts/prerender.js writes it into every page as JSON-LD.
+const ORGANIZATION_ID = `${SITE_URL}/#organization`
+
+export const STRUCTURED_DATA = {
   '@context': 'https://schema.org',
-  '@type': 'ProfessionalService',
-  name: SITE_NAME,
-  url: `${SITE_URL}/`,
-  logo: `${SITE_URL}/favicon.png`,
-  image: `${SITE_URL}/og-image.png`,
-  description: 'Data science, machine learning, and automation consulting.',
-  slogan: 'Data insights, visualized.',
-  knowsAbout: ['Data Science', 'Machine Learning', 'Automation', 'Dashboards'],
-  sameAs: [LINKEDIN_URL],
+  '@graph': [
+    {
+      '@type': 'ProfessionalService',
+      '@id': ORGANIZATION_ID,
+      name: SITE_NAME,
+      url: `${SITE_URL}/`,
+      logo: `${SITE_URL}/favicon.png`,
+      image: `${SITE_URL}/og-image.png`,
+      description: 'Data science, machine learning, and automation consulting.',
+      slogan: 'Data insights, visualized.',
+      knowsAbout: ['Data Science', 'Machine Learning', 'Automation', 'Dashboards', 'Shiny', 'R', 'Python'],
+      availableLanguage: ['English', 'Portuguese'],
+      sameAs: [LINKEDIN_URL],
+      contactPoint: {
+        '@type': 'ContactPoint',
+        contactType: 'sales',
+        url: `${SITE_URL}/contact`,
+        availableLanguage: ['English', 'Portuguese'],
+      },
+      hasOfferCatalog: {
+        '@type': 'OfferCatalog',
+        name: 'Data science consulting services',
+        itemListElement: SERVICES.map(name => ({ '@type': 'Offer', itemOffered: { '@type': 'Service', name } })),
+      },
+    },
+    {
+      // What Google reads for the site name shown in search results
+      '@type': 'WebSite',
+      name: SITE_NAME,
+      url: `${SITE_URL}/`,
+      inLanguage: ['en', 'pt-BR'],
+      publisher: { '@id': ORGANIZATION_ID },
+    },
+  ],
 }
 
 export interface PageMeta {

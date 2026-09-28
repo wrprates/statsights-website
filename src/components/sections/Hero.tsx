@@ -50,39 +50,26 @@ export function Hero() {
       {/* Subtle grid */}
       <div className="pointer-events-none absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px)', backgroundSize: '60px 60px' }} />
 
+      {/* Hero text has no fade-in: it is above the fold and paints straight from the prerendered HTML (the headline is the LCP element) */}
       <motion.div style={{ y, opacity }} className="relative max-w-6xl mx-auto px-6 text-center">
         {/* Glass pill badge */}
-        <motion.div
-          initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+        <div
           className="inline-flex items-center rounded-full px-4 py-1.5 text-sm text-white/80 mb-8 border border-white/10"
           style={{ background: 'rgba(255,255,255,0.08)', backdropFilter: 'blur(10px)' }}
         >
           {copy.badge[locale]}
-        </motion.div>
+        </div>
 
-        {/* Not animated: the headline is the LCP element and should paint immediately */}
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight tracking-tight mb-6">
           {copy.headline[locale]}<br className="hidden md:block" />
           <span style={{ background: 'linear-gradient(90deg, #14CDFE, #1d4ed8)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>{copy.highlight[locale]}</span>
         </h1>
 
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.3 }}
-          className="text-lg md:text-xl text-white/60 max-w-2xl mx-auto mb-10 leading-relaxed"
-        >
+        <p className="text-lg md:text-xl text-white/60 max-w-2xl mx-auto mb-10 leading-relaxed">
           {copy.intro[locale]}
-        </motion.p>
+        </p>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.45 }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-4"
-        >
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <Button asChild size="lg" className="font-semibold px-8 text-[#003459] bg-white hover:bg-white/80">
             <Link to={to('/contact')}>
               {copy.primaryCta[locale]}
@@ -92,7 +79,7 @@ export function Hero() {
           <Button asChild variant="ghost" size="lg" className="text-white/70 hover:text-white border border-white/10 hover:bg-white/10">
             <Link to={to('/services')}>{copy.secondaryCta[locale]}</Link>
           </Button>
-        </motion.div>
+        </div>
       </motion.div>
     </section>
   )

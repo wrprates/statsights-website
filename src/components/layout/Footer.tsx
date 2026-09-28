@@ -71,7 +71,15 @@ export function Footer() {
   return (
     <footer className="border-t border-border/40 bg-[#f2f2f2]">
       <div className="max-w-6xl mx-auto px-6 py-8 flex flex-col md:flex-row items-center justify-between gap-4">
-        <img src={`${import.meta.env.BASE_URL}logo-light.png`} alt="Statsights" className="h-7 w-auto" />
+        {/* lazy: the footer is below the fold, so the logo shouldn't compete with the header for bandwidth */}
+        <img
+          src={`${import.meta.env.BASE_URL}logo-light.png`}
+          alt="Statsights"
+          width={136}
+          height={28}
+          loading="lazy"
+          className="h-7 w-auto"
+        />
         <p className="text-sm text-muted-foreground text-center">
           {copy.rights[locale]}
         </p>
