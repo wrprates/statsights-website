@@ -56,27 +56,27 @@ const features = [
 ]
 
 const pains = [
-  'Oportunidades perdidas no meio do funil — Clientes somem entre o contato inicial e o fechamento por falta de follow-up organizado',
-  'Planilhas desorganizadas e descentralizadas — Cada vendedor tem seu controle, impossível ter visão consolidada da operação',
-  'Falta de visibilidade sobre performance — Não sabe taxa de conversão real, tempo médio por etapa, vendedores com melhor desempenho',
-  'Dificuldade em gerenciar equipe de vendas — Sem controle de metas, comissionamento e atividades dos vendedores',
-  'Perda de histórico com clientes — Não consegue resgatar interações passadas quando cliente volta a fazer contato',
+  'Oportunidades perdidas no meio do funil: Clientes somem entre o contato inicial e o fechamento por falta de follow-up organizado',
+  'Planilhas desorganizadas e descentralizadas: Cada vendedor tem seu controle, impossível ter visão consolidada da operação',
+  'Falta de visibilidade sobre performance: Não sabe taxa de conversão real, tempo médio por etapa, vendedores com melhor desempenho',
+  'Dificuldade em gerenciar equipe de vendas: Sem controle de metas, comissionamento e atividades dos vendedores',
+  'Perda de histórico com clientes: Não consegue resgatar interações passadas quando cliente volta a fazer contato',
 ]
 
 const included = [
-  'Usuários ilimitados — Toda sua equipe pode usar',
-  'Oportunidades ilimitadas — Sem limite de negociações',
-  'Clientes ilimitados — Cresça sem preocupações',
-  'Dashboard analítico completo — Todos os gráficos e métricas',
-  'Gestão de equipe de vendas — Controle total da operação',
+  'Usuários ilimitados: Toda sua equipe pode usar',
+  'Oportunidades ilimitadas: Sem limite de negociações',
+  'Clientes ilimitados: Cresça sem preocupações',
+  'Dashboard analítico completo: Todos os gráficos e métricas',
+  'Gestão de equipe de vendas: Controle total da operação',
 ]
 
 const extras = [
-  'Suporte técnico via email — Resposta em até 24h úteis',
-  'Atualizações automáticas — Sempre com novos recursos',
-  'Acesso de qualquer dispositivo — Desktop, tablet ou celular',
-  'Dados seguros — Backup automático e criptografia',
-  'Sem fidelidade — Cancele quando quiser',
+  'Suporte técnico via email: Resposta em até 24h úteis',
+  'Atualizações automáticas: Sempre com novos recursos',
+  'Acesso de qualquer dispositivo: Desktop, tablet ou celular',
+  'Dados seguros: Backup automático e criptografia',
+  'Sem fidelidade: Cancele quando quiser',
 ]
 
 const faqs = [
@@ -99,7 +99,8 @@ function FAQSection() {
   function toggleItem(i: number) {
     setOpenItems(prev => {
       const next = new Set(prev)
-      next.has(i) ? next.delete(i) : next.add(i)
+      if (next.has(i)) next.delete(i)
+      else next.add(i)
       return next
     })
   }
@@ -208,13 +209,10 @@ export function DealpathConsorcios() {
             CRM · Consórcios · Gestão de Vendas
           </motion.div>
 
-          <motion.h1
-            {...fadeUp(0.15)}
-            className="text-4xl md:text-6xl font-bold leading-tight tracking-tight mb-6"
-          >
+          <h1 className="text-4xl md:text-6xl font-bold leading-tight tracking-tight mb-6">
             Transforme Oportunidades<br className="hidden md:block" />
             <span style={{ background: 'linear-gradient(90deg, #14CDFE, #1d4ed8)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}> em Vendas</span>
-          </motion.h1>
+          </h1>
 
           <motion.p {...fadeUp(0.3)} className="text-lg md:text-xl text-white/60 max-w-2xl mx-auto mb-10 leading-relaxed">
             Profissionalize sua operação de vendas mapeando cada etapa da jornada do cliente,
@@ -262,7 +260,7 @@ export function DealpathConsorcios() {
           <motion.p {...fadeUp(0.1)} className="text-white/60 leading-relaxed">
             O <strong className="text-white">DealPath</strong> é a plataforma completa para corretores e escritórios de vendas de consórcios
             profissionalizarem sua operação. Um CRM desenvolvido especificamente para o mercado de consórcios,
-            onde você controla cada etapa da jornada do cliente — do primeiro contato até o fechamento.
+            onde você controla cada etapa da jornada do cliente, do primeiro contato até o fechamento.
           </motion.p>
         </div>
       </section>
@@ -298,7 +296,7 @@ export function DealpathConsorcios() {
           </motion.h2>
           <div className="space-y-3">
             {[
-              'Sistema em produção desde 2025 — Testado e validado no mercado com centenas de milhões em cartas de consórcios sendo geridos.',
+              'Sistema em produção desde 2025. Testado e validado no mercado com centenas de milhões em cartas de consórcios sendo geridos.',
               'Desenvolvido por especialistas em gestão comercial e vendas',
               'Baseado em práticas reais de escritórios de alto desempenho',
               'Tecnologia robusta utilizada por empresas de dados e analytics',
@@ -389,8 +387,8 @@ export function DealpathConsorcios() {
               <CTAButton label="✨ Começar Agora" />
             </motion.div>
             <motion.p {...fadeUp(0.25)} className="mt-5 text-white/40 text-sm leading-relaxed">
-              ⚡ Preço inicial exclusivo para primeiros clientes — Esta condição não se repetirá<br />
-              💰 Garantia incondicional de 7 dias — Satisfação garantida ou seu dinheiro de volta
+              ⚡ Preço inicial exclusivo para primeiros clientes. Esta condição não se repetirá<br />
+              💰 Garantia incondicional de 7 dias. Satisfação garantida ou seu dinheiro de volta
             </motion.p>
           </div>
         </div>

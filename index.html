@@ -2,12 +2,47 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Statsights — Data insights, visualized.</title>
+    <!-- Redirect legacy HashRouter links (e.g. /#/services) to the real page URL -->
+    <script>
+      // Strip extra leading slashes/backslashes so "#//evil.com" can't become a protocol-relative redirect.
+      if (location.hash.indexOf('#/') === 0) location.replace('%BASE_URL%' + location.hash.slice(2).replace(/^[\/\\]+/, ''))
+    </script>
+    <title>Statsights - Data insights, visualized.</title>
+    <meta name="description" content="Data science, machine learning, and automation consulting. We turn your company data into custom applications that go beyond static dashboards." />
+    <link rel="canonical" href="https://statsights.com/" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/favicon.png" />
+    <meta name="theme-color" content="#003459" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Statsights" />
+    <meta property="og:title" content="Statsights - Data insights, visualized." />
+    <meta property="og:description" content="Data science, machine learning, and automation consulting. We turn your company data into custom applications that go beyond static dashboards." />
+    <meta property="og:url" content="https://statsights.com/" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:image" content="https://statsights.com/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Statsights - Data insights, visualized." />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "Statsights",
+        "url": "https://statsights.com/",
+        "logo": "https://statsights.com/favicon.png",
+        "image": "https://statsights.com/og-image.png",
+        "description": "Data science, machine learning, and automation consulting.",
+        "slogan": "Data insights, visualized.",
+        "knowsAbout": ["Data Science", "Machine Learning", "Automation", "Dashboards"]
+      }
+    </script>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root"><!--app-html--></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

@@ -47,15 +47,11 @@ export function Hero() {
           Data Science · Machine Learning · Automation
         </motion.div>
 
-        <motion.h1
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.15 }}
-          className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight tracking-tight mb-6"
-        >
+        {/* Not animated: the headline is the LCP element and should paint immediately */}
+        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight tracking-tight mb-6">
           Turn Your Data into<br className="hidden md:block" />
           <span style={{ background: 'linear-gradient(90deg, #14CDFE, #1d4ed8)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}> Impactful Applications.</span>
-        </motion.h1>
+        </h1>
 
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -63,7 +59,7 @@ export function Hero() {
           transition={{ duration: 0.7, delay: 0.3 }}
           className="text-lg md:text-xl text-white/60 max-w-2xl mx-auto mb-10 leading-relaxed"
         >
-          Your company has data — but are you truly maximizing its potential?
+          Your company has data, but are you truly maximizing its potential?
           Go beyond static dashboards with custom Data Science, Machine Learning,
           and automation solutions.
         </motion.p>
@@ -76,7 +72,7 @@ export function Hero() {
         >
           <Button asChild size="lg" className="font-semibold px-8 text-[#003459] bg-white hover:bg-white/80">
             <Link to="/contact">
-              Get Started — Free Consultation
+              Get Started: Free Consultation
               <ArrowRight size={16} className="ml-2" />
             </Link>
           </Button>

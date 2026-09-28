@@ -36,14 +36,14 @@ const services = [
     color: '#005c8e',
     bg: '#e8f3fb',
     title: 'Training & Team Enablement',
-    description: "We don't just deliver — we train your team to maintain and extend the solution independently.",
+    description: "We don't just deliver. We train your team to maintain and extend the solution independently.",
   },
   {
     icon: Bot,
     color: '#1d4ed8',
     bg: '#eaf0fd',
     title: 'Machine Learning & Automation',
-    description: 'From churn prediction to demand forecasting — production-ready ML built into your operations.',
+    description: 'From churn prediction to demand forecasting: production-ready ML built into your operations.',
   },
 ]
 

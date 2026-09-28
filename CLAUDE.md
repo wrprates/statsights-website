@@ -20,6 +20,8 @@ Goal: a premium, modern marketing website for a consulting company. Must look cr
 - Using shadcn/ui over MUI because visual quality and brand polish are the priority for a consulting site.
 - shadcn components are owned by this repo — they live in `src/components/ui/` and are editable directly.
 - `.npmrc` has `legacy-peer-deps=true` due to peer dependency conflicts in the Vite template's eslint setup.
+- Every route is prerendered to static HTML at build time for SEO: `npm run build` also runs an SSR build of `src/entry-server.tsx` and `scripts/prerender.js`, which writes `<route>.html`, `404.html`, and `sitemap.xml` into `dist/`. The browser hydrates that HTML (`src/main.tsx`).
+- Production is https://statsights.com (Apache, deployed over FTP by `.github/workflows/main.yml`). `public/.htaccess` maps clean URLs to the prerendered `.html` files and forces HTTPS/non-www. All canonical/OG/sitemap URLs point to statsights.com (`src/seo.ts`, `index.html`).
 
 ## Commands
 
@@ -52,7 +54,12 @@ src/
     Services.tsx
     Contact.tsx
     DealpathConsorcios.tsx   # landing page for the DealPath CRM product
+    NotFound.tsx             # 404 page
   lib/           # utility functions (cn helper etc.)
+  seo.ts         # per-page title, description, lang (used by RouteMeta and the prerender script)
+  entry-server.tsx           # build-time render entry for scripts/prerender.js
+scripts/
+  prerender.js   # writes static HTML per route + sitemap.xml after `vite build`
 ```
 
 ## Pages & routes
@@ -64,7 +71,7 @@ src/
 | `/contact`              | `Contact`                  | Contact form / info                      |
 | `/dealpath-consorcios`  | `DealpathConsorcios`       | Landing page for DealPath CRM product    |
 
-Routes are handled by React Router with `HashRouter` (e.g. `/#/dealpath-consorcios`).
+Routes are handled by React Router with `BrowserRouter`, so each page has a real, indexable URL (e.g. `/dealpath-consorcios`). Old `/#/...` links are redirected by a script in `index.html`. When adding a route, add it to both `src/App.tsx` and `PAGES` in `src/seo.ts`.
 
 ## DealPath Consorcios page
 
