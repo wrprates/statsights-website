@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
-import { canonicalUrl, getPageMeta, ogLocale } from '@/seo'
+import { canonicalUrl, getPageMeta, hreflangLinks, ogLocale } from '@/seo'
 
 function setMeta(selector: string, value: string) {
   document.head.querySelector(selector)?.setAttribute(selector.startsWith('link') ? 'href' : 'content', value)
@@ -21,6 +21,13 @@ export function RouteMeta() {
     setMeta('meta[property="og:url"]', url)
     setMeta('meta[property="og:locale"]', ogLocale(meta.lang))
     setMeta('link[rel="canonical"]', url)
+
+    document.head.querySelectorAll('link[rel="alternate"][hreflang]').forEach(link => link.remove())
+    const canonical = document.head.querySelector('link[rel="canonical"]')
+    for (const { hreflang, href } of hreflangLinks(meta.path).reverse()) {
+      const link = Object.assign(document.createElement('link'), { rel: 'alternate', hreflang, href })
+      canonical?.after(link)
+    }
   }, [pathname])
 
   return null

@@ -16,6 +16,9 @@ function AppRoutes() {
       <Route path="/" element={<Home />} />
       <Route path="/services" element={<Services />} />
       <Route path="/contact" element={<Contact />} />
+      <Route path="/pt" element={<Home />} />
+      <Route path="/pt/services" element={<Services />} />
+      <Route path="/pt/contact" element={<Contact />} />
       <Route path="/dealpath-consorcios" element={<DealpathConsorcios />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
