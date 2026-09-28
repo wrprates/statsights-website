@@ -51,7 +51,7 @@ export const PAGES: PageMeta[] = [
     path: '/pt/contact',
     title: 'Statsights: Contato',
     description:
-      'Agende uma consultoria gratuita com a Statsights. Conte sobre o seu projeto de dados e receba uma resposta em até 24 horas.',
+      'Agende uma consultoria gratuita com a Statsights. Conte sobre seu projeto de dados e receba uma resposta em até 24 horas.',
     lang: 'pt-BR',
   },
   {

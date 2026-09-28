@@ -6,13 +6,13 @@ const copy = {
   heading: { en: 'Start the conversation', pt: 'Comece a conversa' },
   intro: {
     en: 'Tell us about your project and we will get back to you within 24 hours. No commitment, just a friendly chat.',
-    pt: 'Conte sobre o seu projeto e retornaremos em até 24 horas. Sem compromisso, só uma conversa amigável.',
+    pt: 'Conte sobre seu projeto e retornaremos em até 24 horas. Sem compromisso, só uma conversa amigável.',
   },
   trust: {
     en: ['Free consultation', 'Reply within 24h', 'No strings attached'],
     pt: ['Consultoria gratuita', 'Resposta em até 24h', 'Sem compromisso'],
   },
-  formStep: { en: 'Tell us about your project', pt: 'Conte sobre o seu projeto' },
+  formStep: { en: 'Tell us about your project', pt: 'Conte sobre seu projeto' },
   formTitle: { en: 'Contact form', pt: 'Formulário de contato' },
   loading: { en: 'Loading…', pt: 'Carregando…' },
   scheduleStep: { en: 'Pick a time that works for you', pt: 'Escolha o melhor horário para você' },

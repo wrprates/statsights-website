@@ -13,7 +13,7 @@ const copy = {
   ctaHeading: { en: 'Ready to get started?', pt: 'Pronto para começar?' },
   ctaBody: {
     en: "Schedule a free consultation and let's talk about what we can build for your team.",
-    pt: 'Agende uma consultoria gratuita e vamos conversar sobre o que podemos construir para a sua equipe.',
+    pt: 'Agende uma consultoria gratuita e vamos conversar sobre o que podemos construir para sua equipe.',
   },
   cta: { en: 'Schedule a Free Consultation', pt: 'Agende uma Consultoria Gratuita' },
 }
@@ -74,7 +74,7 @@ const services = [
     color: '#0369a1',
     bg: '#e8f4fb',
     title: { en: 'Workflow Integration', pt: 'Integração aos Processos' },
-    summary: { en: 'Solutions that fit into how your team already works.', pt: 'Soluções que se encaixam na forma como a sua equipe já trabalha.' },
+    summary: { en: 'Solutions that fit into how your team already works.', pt: 'Soluções que se encaixam na forma como sua equipe já trabalha.' },
     description: {
       en: "We don't deliver isolated tools. We integrate solutions directly into your existing workflows, connecting to your databases, APIs, cloud storage, and business systems.",
       pt: 'Não entregamos ferramentas isoladas. Integramos as soluções diretamente aos seus fluxos de trabalho, conectando-as aos seus bancos de dados, APIs, armazenamento em nuvem e sistemas de negócio.',
@@ -102,7 +102,7 @@ const services = [
     summary: { en: 'You own everything we build.', pt: 'Tudo o que construímos é seu.' },
     description: {
       en: 'Every line of code we write belongs to you. We share the full codebase, document our work thoroughly, and make sure your team understands what was built and why, so you are never dependent on us to keep things running.',
-      pt: 'Cada linha de código que escrevemos pertence a você. Compartilhamos todo o código, documentamos nosso trabalho com cuidado e garantimos que a sua equipe entenda o que foi construído e por quê, para que você nunca dependa de nós para manter tudo funcionando.',
+      pt: 'Cada linha de código que escrevemos pertence a você. Compartilhamos todo o código, documentamos nosso trabalho com cuidado e garantimos que sua equipe entenda o que foi construído e por quê, para que você nunca dependa de nós para manter tudo funcionando.',
     },
     bullets: {
       en: [
@@ -124,10 +124,10 @@ const services = [
     color: '#005c8e',
     bg: '#e8f3fb',
     title: { en: 'Training & Team Enablement', pt: 'Treinamento e Capacitação da Equipe' },
-    summary: { en: 'We teach your team to own the solution.', pt: 'Ensinamos a sua equipe a dominar a solução.' },
+    summary: { en: 'We teach your team to own the solution.', pt: 'Ensinamos sua equipe a dominar a solução.' },
     description: {
       en: 'Delivery is not the end of our work. We train your internal team to maintain, extend, and build on top of what we create, so your organization becomes more capable over time, not more dependent.',
-      pt: 'A entrega não é o fim do nosso trabalho. Treinamos a sua equipe interna para manter, expandir e evoluir o que criamos, para que a sua organização se torne mais capaz com o tempo, e não mais dependente.',
+      pt: 'A entrega não é o fim do nosso trabalho. Treinamos sua equipe interna para manter, expandir e evoluir o que criamos, para que sua organização se torne mais capaz com o tempo, e não mais dependente.',
     },
     bullets: {
       en: [

@@ -5,7 +5,7 @@ import { cn } from '@/lib/utils'
 
 const languages: { locale: Locale; label: string; name: string; lang: string }[] = [
   { locale: 'en', label: 'EN', name: 'English', lang: 'en' },
-  { locale: 'pt', label: 'PT', name: 'Português', lang: 'pt-BR' },
+  { locale: 'pt', label: 'PT-BR', name: 'Português (Brasil)', lang: 'pt-BR' },
 ]
 
 export function LanguageSwitcher({ className }: { className?: string }) {
