@@ -15,7 +15,7 @@ const {
   SITE_URL,
   SITE_NAME,
   LINKEDIN_URL,
-  ORGANIZATION,
+  STRUCTURED_DATA,
   canonicalUrl,
   hreflangLinks,
   ogImageAlt,
@@ -25,7 +25,7 @@ const {
 const template = fs.readFileSync(path.join(dist, 'index.html'), 'utf-8')
 
 // "<" is escaped so no string in the data can close the <script> tag early.
-const organizationJsonLd = JSON.stringify(ORGANIZATION, null, 2).replace(/</g, '\\u003c')
+const structuredDataJsonLd = JSON.stringify(STRUCTURED_DATA, null, 2).replace(/</g, '\\u003c')
 
 const escapeAttr = value =>
   value.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
@@ -57,7 +57,7 @@ function renderPage(page) {
     html = html.replace(/\s*<link rel="canonical"[^>]*>/, '')
     html = html.replace('</title>', '</title>\n    <meta name="robots" content="noindex" />')
   }
-  html = html.replace('</head>', () => `  <script type="application/ld+json">\n${organizationJsonLd}\n    </script>\n  </head>`)
+  html = html.replace('</head>', () => `  <script type="application/ld+json">\n${structuredDataJsonLd}\n    </script>\n  </head>`)
   return html.replace('<!--app-html-->', () => render(page.path))
 }
 

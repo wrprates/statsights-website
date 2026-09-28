@@ -183,14 +183,9 @@ export function Services() {
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
             {copy.heading[locale]}
           </h1>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.15 }}
-            className="text-white/70 text-lg leading-relaxed"
-          >
+          <p className="text-white/70 text-lg leading-relaxed">
             {copy.intro[locale]}
-          </motion.p>
+          </p>
         </div>
       </section>
 

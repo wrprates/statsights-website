@@ -61,6 +61,7 @@ export function Contact() {
               src="https://docs.google.com/forms/d/e/1FAIpQLSdYUq5V3rG2lofbfpIRXYGad-_0gCAB3m__G9h7MCuJG1EG5A/viewform?embedded=true"
               width="100%"
               height="820"
+              loading="lazy"
               frameBorder="0"
               marginHeight={0}
               marginWidth={0}

@@ -29,7 +29,7 @@ export function Header() {
       <div className="max-w-6xl mx-auto px-6 flex h-16 items-center justify-between">
         <motion.div whileTap={{ scale: 0.97 }}>
           <Link to={to('/')} className="flex items-center gap-3">
-            <img src={`${import.meta.env.BASE_URL}logo-dark.png`} alt="Statsights" className="h-8 w-auto" />
+            <img src={`${import.meta.env.BASE_URL}logo-dark.png`} alt="Statsights" width={156} height={32} className="h-8 w-auto" />
             <span className="hidden sm:block text-sm text-white/60">{copy.tagline[locale]}</span>
           </Link>
         </motion.div>

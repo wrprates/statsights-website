@@ -10,7 +10,7 @@ export {
   SITE_URL,
   SITE_NAME,
   LINKEDIN_URL,
-  ORGANIZATION,
+  STRUCTURED_DATA,
   canonicalUrl,
   hreflangLinks,
   ogImageAlt,
