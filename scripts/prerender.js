@@ -8,7 +8,7 @@ const root = path.resolve(import.meta.dirname, '..')
 const dist = path.join(root, 'dist')
 const serverEntry = path.join(root, 'dist-ssr', 'entry-server.js')
 
-const { render, PAGES, NOT_FOUND, SITE_URL, canonicalUrl, hreflangLinks, ogLocale } = await import(pathToFileURL(serverEntry).href)
+const { render, PAGES, NOT_FOUND, SITE_URL, canonicalUrl, hreflangLinks, ogImageAlt, ogLocale } = await import(pathToFileURL(serverEntry).href)
 
 const template = fs.readFileSync(path.join(dist, 'index.html'), 'utf-8')
 
@@ -20,7 +20,7 @@ function setTag(html, pattern, attr, value) {
   return html.replace(pattern, match => match.replace(new RegExp(`${attr}="[^"]*"`), `${attr}="${escapeAttr(value)}"`))
 }
 
-function renderPage(page, { noindex = false } = {}) {
+function renderPage(page) {
   const url = canonicalUrl(page.path)
   let html = template
   html = html.replace(/<html lang="[^"]*"/, `<html lang="${page.lang}"`)
@@ -35,7 +35,12 @@ function renderPage(page, { noindex = false } = {}) {
   html = setTag(html, /<meta property="og:description"[^>]*>/, 'content', page.description)
   html = setTag(html, /<meta property="og:url"[^>]*>/, 'content', url)
   html = setTag(html, /<meta property="og:locale"[^>]*>/, 'content', ogLocale(page.lang))
-  if (noindex) html = html.replace('</title>', '</title>\n    <meta name="robots" content="noindex" />')
+  html = setTag(html, /<meta property="og:image:alt"[^>]*>/, 'content', ogImageAlt(page.lang))
+  // A 404 has no canonical URL of its own; it only tells crawlers not to index it.
+  if (page.noindex) {
+    html = html.replace(/\s*<link rel="canonical"[^>]*>/, '')
+    html = html.replace('</title>', '</title>\n    <meta name="robots" content="noindex" />')
+  }
   return html.replace('<!--app-html-->', render(page.path))
 }
 
@@ -52,7 +57,7 @@ for (const page of PAGES) {
 
 // One 404 page per language; .htaccess picks pt/404.html for URLs under /pt.
 for (const page of Object.values(NOT_FOUND)) {
-  writePage(`${page.path.slice(1)}.html`, renderPage(page, { noindex: true }))
+  writePage(`${page.path.slice(1)}.html`, renderPage(page))
 }
 
 const today = new Date().toISOString().slice(0, 10)
