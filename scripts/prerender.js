@@ -17,14 +17,15 @@ const escapeAttr = value =>
 
 function setTag(html, pattern, attr, value) {
   if (!pattern.test(html)) throw new Error(`prerender: tag not found in index.html: ${pattern}`)
-  return html.replace(pattern, match => match.replace(new RegExp(`${attr}="[^"]*"`), `${attr}="${escapeAttr(value)}"`))
+  return html.replace(pattern, match => match.replace(new RegExp(`${attr}="[^"]*"`), () => `${attr}="${escapeAttr(value)}"`))
 }
 
+// Every replacement below passes a function, so "$&" or "$'" in page content (e.g. "R$") is inserted literally.
 function renderPage(page) {
   const url = canonicalUrl(page.path)
   let html = template
   html = html.replace(/<html lang="[^"]*"/, `<html lang="${page.lang}"`)
-  html = html.replace(/<title>[^<]*<\/title>/, `<title>${escapeAttr(page.title)}</title>`)
+  html = html.replace(/<title>[^<]*<\/title>/, () => `<title>${escapeAttr(page.title)}</title>`)
   html = setTag(html, /<meta name="description"[^>]*>/, 'content', page.description)
   html = setTag(html, /<link rel="canonical"[^>]*>/, 'href', url)
   const alternates = hreflangLinks(page.path)
@@ -41,7 +42,7 @@ function renderPage(page) {
     html = html.replace(/\s*<link rel="canonical"[^>]*>/, '')
     html = html.replace('</title>', '</title>\n    <meta name="robots" content="noindex" />')
   }
-  return html.replace('<!--app-html-->', render(page.path))
+  return html.replace('<!--app-html-->', () => render(page.path))
 }
 
 function writePage(file, html) {
@@ -60,10 +61,10 @@ for (const page of Object.values(NOT_FOUND)) {
   writePage(`${page.path.slice(1)}.html`, renderPage(page))
 }
 
-const today = new Date().toISOString().slice(0, 10)
+// No <lastmod>: the build date would claim every page changed on every deploy.
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${PAGES.map(p => `  <url>\n    <loc>${canonicalUrl(p.path)}</loc>\n    <lastmod>${today}</lastmod>\n  </url>`).join('\n')}
+${PAGES.map(p => `  <url>\n    <loc>${canonicalUrl(p.path)}</loc>\n  </url>`).join('\n')}
 </urlset>
 `
 fs.writeFileSync(path.join(dist, 'sitemap.xml'), sitemap)
