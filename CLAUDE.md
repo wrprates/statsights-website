@@ -21,7 +21,7 @@ Goal: a premium, modern marketing website for a consulting company. Must look cr
 - shadcn components are owned by this repo — they live in `src/components/ui/` and are editable directly.
 - `.npmrc` has `legacy-peer-deps=true` due to peer dependency conflicts in the Vite template's eslint setup.
 - Every route is prerendered to static HTML at build time for SEO: `npm run build` also runs an SSR build of `src/entry-server.tsx` and `scripts/prerender.js`, which writes `<route>.html`, `404.html`, and `sitemap.xml` into `dist/`. The browser hydrates that HTML (`src/main.tsx`).
-- Production is https://statsights.com (Apache, deployed over FTP by `.github/workflows/main.yml`). `public/.htaccess` maps clean URLs to the prerendered `.html` files and forces HTTPS/non-www. All canonical/OG/sitemap URLs point to statsights.com (`src/seo.ts`, `index.html`).
+- Production is https://statsights.com on GitHub Pages, deployed by `.github/workflows/main.yml` (build + `actions/deploy-pages`; repo Settings → Pages → Source = GitHub Actions). GitHub Pages serves `/services` from the prerendered `services.html` natively; `public/CNAME` holds the custom domain and `public/.nojekyll` disables Jekyll. DNS (A records to GitHub Pages IPs, `www` CNAME to `wrprates.github.io`) lives at the domain's DNS provider, not in this repo. All canonical/OG/sitemap URLs point to statsights.com (`src/seo.ts`, `index.html`).
 
 ## Commands
 
@@ -80,7 +80,7 @@ Routes are handled by React Router with `BrowserRouter`, so each page has a real
 - English lives at the root, Portuguese (pt-BR) under `/pt` with the same paths (`/services` <-> `/pt/services`). The locale is derived from the URL (`useLocale()` in `src/i18n.ts`); there is no stored preference or auto-redirect.
 - Translatable strings sit next to the component that uses them as `{ en: '...', pt: '...' }` objects, read with `copy.key[locale]`. Build internal links with `useLocalizedPath()` so they stay in the current language.
 - To translate a new page: add both routes to `App.tsx` and both entries to `PAGES`. The header switcher (`LanguageSwitcher`) and hreflang tags only appear when both versions exist in `PAGES`.
-- Each language has its own 404 (`404.html`, `pt/404.html`); `.htaccess` picks the Portuguese one for URLs under `/pt`.
+- Each language has its own 404 (`404.html`, `pt/404.html`). GitHub Pages only serves the root `404.html`, but after hydration the page re-renders in the URL's language.
 - The DealPath page is Portuguese-only and stays at `/dealpath-consorcios`.
 
 ## DealPath Consorcios page

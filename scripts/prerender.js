@@ -67,12 +67,13 @@ function writePage(file, html) {
   console.log(`prerendered -> dist/${file}`)
 }
 
-// Apache (public/.htaccess) serves /services from services.html and /pt/services from pt/services.html.
+// GitHub Pages serves /services from services.html and /pt/services from pt/services.html (extensionless URLs).
 for (const page of PAGES) {
   writePage(page.path === '/' ? 'index.html' : `${page.path.slice(1)}.html`, renderPage(page))
 }
 
-// One 404 page per language; .htaccess picks pt/404.html for URLs under /pt.
+// GitHub Pages only uses the root 404.html; pt/404.html is kept for hosts that can pick it per path.
+// After hydration the 404 page re-renders in the language of the URL anyway.
 for (const page of Object.values(NOT_FOUND)) {
   writePage(`${page.path.slice(1)}.html`, renderPage(page))
 }
